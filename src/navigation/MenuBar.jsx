@@ -14,20 +14,44 @@ const MenuBar = () => {
           </div>
 
           <div class="menu-items">
-            {/* <div><Link className='' to="/" >Головна</Link></div>
-<div>            <Link className='' to="/texttask" >Правила</Link>
-</div>
-            <div>            <Link className='' to="/texttask" >Про гру</Link>
-</div>
+            <div>
+              <Link className="" to="/">
+                Головна
+              </Link>
+            </div>
+            <div>
+              {' '}
+              <Link className="" to="/texttask">
+                Правила
+              </Link>
+            </div>
+            <div>
+              {' '}
+              <Link className="" to="/texttask">
+                Про гру
+              </Link>
+            </div>
 
-            <div>            <Link className='' to="/texttask" >Кабінет</Link>
-</div>
+            <div>
+              {' '}
+              <Link className="" to="/texttask">
+                Кабінет
+              </Link>
+            </div>
 
-            <div>            <Link className='' to="/texttask" >Вибір складності</Link>
-</div>
+            <div>
+              {' '}
+              <Link className="" to="/texttask">
+                Вибір складності
+              </Link>
+            </div>
 
-            <div>            <Link className='' to="/texttask" >Вибір гри</Link>
-</div> */}
+            <div>
+              {' '}
+              <Link className="" to="/texttask">
+                Вибір гри
+              </Link>
+            </div>
             <li>
               <Link className="" to="/">
                 Головна

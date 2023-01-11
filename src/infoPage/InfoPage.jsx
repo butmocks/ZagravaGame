@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './infoPage.scss'
-
+import MenuBar from '../navigation/Menu';
 
 
 
 const InfoPage = () => {
   return (
+    
     <div className="info">
+      <MenuBar />
       <div className="text">
         <h1 >Цікавий факт</h1>
         </div>

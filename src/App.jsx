@@ -6,7 +6,7 @@ import StartScreen from './startScreen/StartScreen';
 import PageNotFound from './PageNotFound/PageNotFound.jsx';
 import TextTask from './Task/TextTask';
 import Rules from './navigation/Rules.jsx';
-import MenuBar from './navigation/MenuBar';
+import MenuBar from './navigation/Menu';
 import InfoPage from './infoPage/InfoPage';
 import About from './navigation/About';
 import GameTask from './Task/GameTask';
