@@ -2,30 +2,30 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './animate.css';
 
-import './startscreen.scss'
+// import './start.scss'
+import './startScreen.scss';
 
 const StartScreen = () => {
   return (
-    <div className="startscreen">
-      <div className='adults'></div>
-      <div className="logo"></div>
-      <div className="text_logo">Заграва</div>
-      <div className="text">ну дуже цікава гра</div>
-      <button className="btn_start">
-        <Link to="/info">Далі</Link>
-      </button>
+    <div className="game-box">
+      <form>
+        <div className="start_screen">
+         <h1 className="text_logo">Заграва</h1>
+
+          <div className="logo">
+            
+          </div>
+
+
+
+          <h3 className="text" >ну дуже цікава гра</h3>
+          <span>
+            <Link className="a" to="/info">ПОЧАТИ!</Link>
+          </span>
+        </div>
+      </form>
     </div>
   );
 };
 
-
-
-
-
 export default StartScreen;
-
-{/* <div class="container">
-<div class="bg-box">
-  { Кодимо } солов'їною 
-</div>
-</div> */}

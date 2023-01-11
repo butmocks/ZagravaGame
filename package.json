@@ -5,8 +5,7 @@
   "scripts": {
     "start": "npm run start-dev & npm run serve",
     "start-dev": "webpack serve --mode=development --devtool source-map",
-    "build": "npm run serve & npm run build-dev",
-    "build-dev": "webpack --mode=production",
+    "build": "webpack --mode=production",
     "serve": "json-server --watch db.json"
   },
   "keywords": [],
@@ -36,14 +35,22 @@
   },
   "dependencies": {
     "core-js": "^3.27.1",
+    "fs.promises": "^0.1.2",
     "jquery": "^3.6.3",
-    "json-server": "^0.17.1",
+    "json-server": "^0.8.6",
+    "latest": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
-    "react-simple-animate": "^3.5.2",
-    "three": "^0.148.0",
-    "threejs-toys": "^0.0.8"
+    "yaml": "^2.2.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/butmocks/ZagravaGame.git"
+  },
+  "bugs": {
+    "url": "https://github.com/butmocks/ZagravaGame/issues"
+  },
+  "homepage": "https://github.com/butmocks/ZagravaGame#readme",
   "description": ""
 }

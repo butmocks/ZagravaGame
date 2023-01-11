@@ -1,0 +1,21 @@
+/* body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    background-color: #17161e;
+    position:absolute;
+    color:white;
+    display: inline-block;
+    background: rgba(59,173,227,1);
+    background: linear-gradient(45deg, rgb(18, 40, 51) 0%, rgb(197, 87, 230) 25%, rgb(137, 41, 172) 51%, rgb(243, 40, 158) 100%);
+  
+  }
+  body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   */

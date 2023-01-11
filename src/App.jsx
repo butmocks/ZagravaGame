@@ -1,36 +1,37 @@
-
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-import ColorGameType from './ColorGameType.jsx';
-import Home from './Home.jsx';
+import ColorGameType from './colorGameType/ColorGameType.jsx';
+import Names from './names/Names.jsx';
 import StartScreen from './startScreen/StartScreen';
-import PageNotFound from './PageNotFound.jsx';
-import TextTask from './TextTask';
-import Rules from './Rules.jsx';
-import MenuBar from './navbar/MenuBar';
-import InfoPage from './infoPage/InfoPage'
-import About from './About'
-import GameTask from './GameTask'
-
-import './App.scss'
+import PageNotFound from './PageNotFound/PageNotFound.jsx';
+import TextTask from './Task/TextTask';
+import Rules from './navigation/Rules.jsx';
+import MenuBar from './navigation/MenuBar';
+import InfoPage from './infoPage/InfoPage';
+import About from './navigation/About';
+import GameTask from './Task/GameTask';
 
 class App extends Component {
   render() {
     return (
-      <div className='cover'> 
+      <div className="">
         <BrowserRouter>
-
           <Routes>
             <Route path="/" element={<StartScreen />} />
             <Route path="/info" element={<InfoPage />} />
-            <Route path="/menu" element={<MenuBar />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/texttask" element={<TextTask />} />
+            <Route path="/names" element={<Names />} />
             <Route path="/gametype" element={<ColorGameType />} />
+            <Route path="/texttask" element={<TextTask />} />
+
+            <Route path="/menu" element={<MenuBar />} />
+
+            <Route path="/about" element={<About />} />
             <Route path="/rules" element={<Rules />} />
+
             <Route path="/*" element={<PageNotFound />} />
+
             <Route path="/gametask" element={<GameTask />} />
+
             {/* <Route path='/admin' element={<Admin />} />  */}
           </Routes>
         </BrowserRouter>
