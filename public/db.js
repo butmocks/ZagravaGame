@@ -1,18 +1,43 @@
-const sqlite3 = require('sqlite3')
-const db = new sqlite3.Database('../src/db-repack/oldver/db.sqlite3')
+const sqlite3 = require('sqlite3');
+const db = new sqlite3.Database('../src/db-repack/oldver/db.sqlite3');
 
 db.serialize(() => {
-  db.each(`SELECT * 
+  db.each(
+    `SELECT * 
 FROM whitegame
 LIMIT 1 
-OFFSET ABS(RANDOM()) % MAX((SELECT COUNT(*) FROM whitegame), 1)`, (err, row) => {
-    console.log(`${row.task}`);
-  });
+OFFSET ABS(RANDOM()) % MAX((SELECT COUNT(*) FROM whitegame), 1)`,
+    (err, row) => {
+      console.log(`${row.task}`);
+    },
+  );
 });
-console.log(db)
+console.log(db);
 db.close();
 module.exports = db;
 
+const sqlite3 = require('sqlite3').verbose();
+
+function getTask(conn, id) {
+  var c, result;
+  cur = db.cursor();
+  c.execute(`SELECT task FROM whiteGame WHERE id = ?`, [id]);
+  result = c.fetchone();
+
+  if (result) {
+    return result[0];
+  }
+}
+getTask('../dbfrozzy/gamedb.db', '5');
+console.log(getTask());
+// const sqlite3 = require('sqlite3').verbose();
+
+// // import * as sqlite3 from 'sqlite3';
+// var a, cur, db;
+// db = sqlite3.connect('../oldver/db.sqbpro');
+// cur = db.cursor();
+// a = cur.execute('SELECT task FROM whiteGame WHERE id = 2').fetchone()[0].toString();
+// console.log(a);
 
 // const initSqlJs = require('sql.js');
 // // or if you are in a browser:
@@ -28,7 +53,6 @@ module.exports = db;
 // const db = new SQL.Database();
 // // NOTE: You can also use new SQL.Database(data) where
 // // data is an Uint8Array representing an SQLite database file
-
 
 // // Execute a single SQL string that contains multiple statements
 // let sqlstr = "CREATE TABLE hello (a int, b char); \

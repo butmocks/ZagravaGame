@@ -1,4 +1,3 @@
-const sqlite3 = require('sqlite3');
 let db = new sqlite3.Database('./db.sqlite3', err => {
   if (err) {
     console.error(err.message);
@@ -7,12 +6,7 @@ let db = new sqlite3.Database('./db.sqlite3', err => {
 });
 
 db.serialize(() => {
-  db.each(`SELECT * FROM alltasks WHERE id=3), 1)`, (err, row) => {
-    if ((err, row)) {
-      console.error(err.message);
-    }
-    console.log(row.id + '\t' + row.task);
-  });
+  db.each('SELECT task FROM alltasks WHERE id=6'),
 });
 
 db.close(err => {
@@ -21,3 +15,4 @@ db.close(err => {
   }
   console.log('Close the database connection.');
 });
+

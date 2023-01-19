@@ -1,0 +1,23 @@
+.logo {
+  display: flex;
+  box-sizing: border-box;
+  background: url('./logo.png') 0% 0% / 100% 100%;
+
+  width: 250px;
+  height: 100px;
+  margin: 0 0 30px;
+  animation: 2s ease 1s 1 normal both running rubberBand;
+}
+.text_logo {
+  color: #3c91bb;
+
+  font-size: 50px;
+  animation: 2s ease 0s 1 normal both running bounceInUp;
+}
+
+.text {
+  color: rgb(85, 154, 194);
+
+  font-size: 20px;
+  animation: 1s ease 0s 1 normal both running zoomIn;
+}

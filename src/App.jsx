@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import ColorGameType from './colorGameType/ColorGameType.jsx';
 import Names from './names/Names.jsx';
-import StartScreen from './startScreen/StartScreen';
+import StartScreen from './components/baner/StartScreen';
 import PageNotFound from './PageNotFound/PageNotFound.jsx';
 import TextTask from './Task/TextTask';
 import Rules from './navigation/Rules.jsx';
@@ -10,12 +10,17 @@ import MenuBar from './navigation/Menu';
 import InfoPage from './infoPage/InfoPage';
 import About from './navigation/About';
 import GameTask from './Task/GameTask';
+import Header from './components/header/Header.jsx';
+// import Main from './components copy/Main.jsx';
+
+// import DB from './Db'
 
 class App extends Component {
   render() {
     return (
       <div className="">
         <BrowserRouter>
+          <Header />
           <Routes>
             <Route path="/" element={<StartScreen />} />
             <Route path="/info" element={<InfoPage />} />
@@ -32,7 +37,7 @@ class App extends Component {
 
             <Route path="/gametask" element={<GameTask />} />
 
-            {/* <Route path='/admin' element={<Admin />} />  */}
+            {/* <Route path="/db" element={<DB />} /> */}
           </Routes>
         </BrowserRouter>
       </div>

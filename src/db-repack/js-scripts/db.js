@@ -20,29 +20,23 @@
 const sqlite3 = require('sqlite3').verbose();
 // const db = new sqlite3.Database('gamedb.db');
 // open the database
-let db = new sqlite3.Database('gamedb.db', (err, row) => {
+let db = new sqlite3.Database('./db.sqlite3', (err, row) => {
   if (err) {
-    console.log(row.id + ": " + row.info)
+    console.log(row.id + ': ' + row.task);
   }
   console.log('Connected to the chinook database.');
 });
 
-
 db.serialize(() => {
-  db.each(`SELECT *
-    FROM whitegame
-LIMIT 1 
-OFFSET ABS(RANDOM()) % MAX((SELECT COUNT(*) FROM whitegame), 1)`,
-
-    (err, row) => {
-      if (err) {
-        console.error(err.message);
-      }
-      console.log(row.id + "\t" + row.task);
-    });
+  db.each(`SELECT task FROM alltasks WHERE id=5`, (err, row) => {
+    if (err) {
+      console.error(err.message);
+    }
+    console.log(row.id + '\t' + row.task);
+  });
 });
 
-db.close((err) => {
+db.close(err => {
   if (err) {
     console.error(err.message);
   }
@@ -51,7 +45,7 @@ db.close((err) => {
 
 // SELECT *
 //   FROM redgame
-// LIMIT 1 
+// LIMIT 1
 // OFFSET ABS(RANDOM()) % MAX((SELECT COUNT(*) FROM redgame), 1)
 
 // `SELECT id as id,
